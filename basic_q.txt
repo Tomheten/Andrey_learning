@@ -1,0 +1,7 @@
+1. stack and heap
+// shift + enter -> go to the under string
+// ctr + /  -> comment strings
+2. different between outline and border
+// ctrl + r
+// ctrl + shift + r
+// ctrl + alt + left click -> multiplication of cursor

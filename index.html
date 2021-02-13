@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #body {
+            height: 600px;
+        }
+
+        .myDivWrapper {
+            width: 100%;
+            position: relative;
+        }
+
+        .myDiv {
+            position: absolute;
+            top: 10px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .myDiv:active {
+            top: 16px;
+            left: 106px;
+            width: 97px;
+            height: 97px;
+            /*zoom: 0.9;*/
+            /*border-radius: 30%;*/
+            box-shadow: none;
+        }
+
+        .text-wrapper {
+            user-select: none;
+            font-size: 1.5rem;
+            /*color: red;*/
+        }
+    </style>
+</head>
+<body id="body">
+
+<div class="simple-div">simple div</div>
+<script>
+    'use script';
+    //
+    // +function() {
+    //     function test() {
+    //         let i = 3;
+    //         const z = 10;
+    //         const j = 100;
+    //         while (i) {
+    //             console.log('i = ', i);
+    //             i = i - 1; // short i-=1
+    //         }
+    //         console.log(j + z);
+    //     }
+    //
+    //     test();
+    // }();
+
+    +function () {
+        const arr = [1, 2, 4, 7];
+        // stream of numbers -> 1 2 4
+        // arr.forEach((e) => console.log(e));
+
+        const ratio = 3;
+
+        // function myMap(ё) {
+        //     return ё * this.ratio;
+        // }
+        //
+        // const myMap = (number) => {
+        //     return number * ratio;
+        // };
+        //
+        // const myFilter = (number) => {
+        //     return number % 2 === 1;
+        // };
+
+        // arrow function
+
+        // console.log('результат моей функции', arr.map(myMap));
+        // const filteredArr = arr.filter(myFilter);
+        // console.log('filter ', arr.filter(myFilter), '\narr', arr);
+
+        // const newArr =
+        // arr
+        //     .map((n) => n * 3)
+        //     .filter((n) => n <= 10)
+        //     .map((n) => n / 10)
+        //     .forEach((n) => console.log('elem', n));
+        // console.log('newArr', newArr);
+        // console.log(myFilter);
+/////////////////////////////
+        const className = 'myDiv';
+
+        // const myDivClass = document.createElement('style');
+        // myDivClass.innerText = ` .${className}` + '{ ' +
+        //     'width: 100px;' +
+        //     ' height: 100px;' +
+        //     ' background-color: red;' +
+        //     ' } ';
+
+        // const myDivWrapper = document.createElement('div');
+        // myDivWrapper.classList.add('myDivWrapper')
+        //
+        // const div = document.createElement('div');
+        // div.classList.add(className);
+        //
+        // const text = document.createElement('div');
+        // text.innerText = 'inner text';
+        // text.classList.add('text-wrapper');
+        //
+        // div.append(text);
+        // myDivWrapper.append(div)
+        //
+        // document.body.append(myDivWrapper);
+
+        //////////////////////////
+
+        // let flag = false;
+        //
+        // const element = document.body.querySelector('.simple-div');
+        // console.log('element', element);
+        // element.style.backgroundColor = 'red';
+        // element.style.width = '60px';
+        // element.style.cursor = 'pointer';
+        // element.style.position = 'fixed';
+        // element.addEventListener('click', (event) => {
+        //         flag = !flag;
+        //         // console.log('event', event);
+        //         // console.log('click');
+        //     }
+        // )
+        // element.addEventListener('mouseover', () => {
+        //     console.log('hover');
+        // })
+        // document.body.addEventListener('mousemove', (event) => {
+        //     if (flag) {
+        //         element.style.top = event.y + 'px';
+        //         element.style.left = event.x + 'px';
+        //     }
+        //     // console.log(event.x);
+        // })
+        // // element.onClick = () => console.log('click');
+        // console.dir(element);
+    }();
+    /////////////////////////////////////
+    //     class Person {
+    //         constructor() {
+    //             this.name = ''
+    //             this.age = 200;
+    //         }
+    //     }
+    //
+    //     class User extends Person {
+    //
+    //         constructor(name, age) {
+    //             super(name, age);
+    //             console.log('User constructor was called');
+    //             this.name = name;
+    //             this.age = age;
+    //         }
+    //     }
+    //
+    //     console.log(new User('Vasya', 100));
+    const animal = {
+        sayName() {
+            console.log('my name is ' + this.name);
+        }
+    }
+    console.log(animal);
+    const dog = {
+        age: 10,
+        name: 'dog'
+    }
+
+    console.log('dog', dog);
+    Object.setPrototypeOf(dog, animal);
+    // Object.setPrototypeOf(dog, null);
+
+    dog.sayName();
+
+    const cat = {
+        age: 4,
+        name: 'Pit'
+    }
+
+    Object.setPrototypeOf(cat, animal);
+    cat.sayName();
+</script>
+
+</body>
+</html>
